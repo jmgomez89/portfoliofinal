@@ -26,7 +26,7 @@
                     <form action="portfolio_db.php" class="box" enctype="multipart/form-data" method="POST">
                     <?php 
                     $id = $_GET['id'];
-                    $db = mysqli_connect("45.132.157.182", "u921038692_juanmgomez", "Cachas2020", "u921038692_portfolio") or exit ("No se pudo conectar a la base de datos");
+                    $db = mysqli_connect("127.0.0.1:3306", "u921038692_juanmgomez", "Cachas2020", "u921038692_portfolio") or exit ("No se pudo conectar a la base de datos");
                     $result = mysqli_query($db, "SELECT nombre_proyecto, repositorio, link, imagen, descripcion from proyectos where id='$id'");
                     $row = mysqli_fetch_array($result);
                     ?>
