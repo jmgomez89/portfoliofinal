@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.sidebar { 
+    height: 100%;
+    width: 35%;
+    position: fixed!important;
+    z-index: 1;
+    overflow: auto;
+}
+
+.sidebar img {
+    width: 100%;
+    height: 100%;
+}
+
+.hidden_sidebar { 
+    height: 100%;
+    width: 65%;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    position: fixed!important;
+    overflow: auto;
+    display:none;
+    padding-top:150px;
+    right:0;
+    z-index:2
+}
+
+.imagen_ok {
+    width: 100%;
+    height: 50vh;
+}
+.imagenOk {
+    margin: 15% auto;
+    height: 10em;
+    display: block;
+}
+
+.linkOk{
+    text-decoration: none;
+    color: goldenrod;
+    font-size: larger;
+    margin-left: 30px;
+}
+.color-black, .hover-black:hover {
+    color:#fff!important;
+    background-color:#000!important;
+}
+
+.color-white,.hover-white:hover { 
+    color:#000!important;
+    background-color:#fff!important;
+}
+
+.color-light-grey,.hover-light-grey:hover {
+    color:#000!important;
+    background-color:#f1f1f1!important;
+}
+
+.animate-right {
+    position:relative;
+    animation:animateright 0.4s;
+}
+
+.margin-top { 
+    margin-top:16px!important;
+}
+
+.xxlarge {
+    font-size:36px!important;
+}
+
+.xxxlarge {
+    font-size:48px!important;
+}
+
+.jumbo {
+    font-size:64px!important;
+}
+
+.display-topright {
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+.button {
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+}
+
+.bar-block {
+    width:100%;
+    display:block;
+    padding:8px 16px;
+    text-align:left;
+    border:none;
+    white-space:normal;
+    float:none;
+    outline:0;
+}
+
+.center {
+    display:inline-block;
+    width:auto;
+    text-align:center;
+}
+
+.bar-item {
+    padding:8px 16px;
+    float:left;
+    width:auto;
+    border:none;
+    display:block;
+    outline:0;
+    width:100%;
+    text-align:left;
+    white-space:normal;
+}
+
+.text-grey {
+    color:#757575!important;
+}
+
+.text-black,.hover-text-black:hover {
+    color:#000!important;
+}
+
+.opacity, .hover-opacity:hover {
+    opacity:0.60;
+}
+
+.main {
+    margin-left:0!important;
+    margin-right:0!important;
+    transition:.4s;
+}
+
+.container {
+    padding:0.01em 16px;
+}
+
+.content {
+    margin-left:auto;
+    margin-right:auto;
+    max-width:980px;
+}
+
+.justify {
+    text-align:justify!important;
+}
+
+.padding-large {
+    padding:12px 24px!important;
+    margin-left:35%;
+    
+}
+
+.skills {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 1em;
+}
+
+.certificate_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.certificate{
+    width: 50%;
+    height: 17em;
+    margin: 1em;
+    border-radius: 5px;
+    text-align: center;
+    padding: 0.5em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.certificate img {
+    width: 90%;
+    height: 85%;
+}
+
+.padding-32 { 
+    padding-top:32px!important;
+    padding-bottom:32px!important;
+}
+
+.row-padding {
+    padding:0 8px;
+}
+
+.half {
+    padding:0 8px;
+    float:left;
+    width:100%;
+}
+
+.top {
+    position:fixed;
+    width:100%;
+    z-index:1;
+    top:0;
+}
+
+.portfolio_cards_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.portfolio_card {
+    margin: 2% 0;
+    width: 80%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.crud_container {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+}
+
+.crud_form_container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.crud-label {
+    color: black;
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+
+@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+
+@media (min-width:993px){
+    
+    .sidebar {
+        display:block!important;
+    }
+
+    
+}
+
+@media (max-width:992px){
+    .sidebar { 
+        display:none;
+    }
+
+    .padding-large{
+        
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .hidden_sidebar { 
+        width: 100%;
+    }
+
+}
