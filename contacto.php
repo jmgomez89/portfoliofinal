@@ -13,7 +13,7 @@ $cuerpo_mail = "Nombre: ".$nombre."\r\n"
 
 mail("jmgomezn8@gmail.com", "Mensaje Portfolio", $cuerpo_mail);
 
-$conexion = mysqli_connect("localhost", "root", "", "portfolio") or exit ("No se pudo conectar a la base de datos");
+$conexion = mysqli_connect("45.132.157.182", "u921038692_juanmgomez", "Cachas2020", "u921038692_portfolio") or exit ("No se pudo conectar a la base de datos");
 
 mysqli_query($conexion, "INSERT INTO contacto VALUES(DEFAULT, '$nombre', '$apellido', '$mail', '$comentarios')");
 

@@ -27,7 +27,7 @@
                     <h1>Cargar Proyecto</h1>
                         <input type="text" name="nombre" placeholder="Nombre">
                         <input type="text" name="repositorio" placeholder="Repositorio">
-                        <input type="text" name="Link" placeholder="Link">
+                        <input type="text" name="link" placeholder="Link">
                         <input type="file" name="imagen">
                         <textarea name="descripcion" id="descripcion" cols="50" rows="5"></textarea>
                         <input type="submit">

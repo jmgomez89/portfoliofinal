@@ -8,7 +8,7 @@
     <!-- Favicon -->
     <link rel="icon" href="img/favicon.png">
     <!-- CSS -->
-    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/login.css">
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/7f40cbe45f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,46 +19,32 @@
 </head>
 <body>
 
-<div class="crud_container" style="background-image: url(img/php.jpg);">
- 
-    <div class="crud_form_container">
-            <form class="crud_form" action="portfolio_mod_db.php" enctype="multipart/form-data" method="POST">
-                <?php 
-                $id = $_GET['id'];
-                $db = mysqli_connect("localhost", "root", "", "portfolio") or exit ("No se pudo conectar a la base de datos");
-                $result = mysqli_query($db, "SELECT nombre_proyecto, repositorio, link, imagen, descripcion from proyectos where id='$id'");
-                $row = mysqli_fetch_array($result);
-                ?>
-                <div class="mb-2">
-                <label for="nombre_proyecto" class="crud-label">Nombre</label>
-                <input type="text" class="form-control" name="nombre_proyecto" id="nombre_proyecto" value="<?= $row['nombre_proyecto'] ?>">
+<div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <form action="portfolio_db.php" class="box" enctype="multipart/form-data" method="POST">
+                    <?php 
+                    $id = $_GET['id'];
+                    $db = mysqli_connect("45.132.157.182", "u921038692_juanmgomez", "Cachas2020", "u921038692_portfolio") or exit ("No se pudo conectar a la base de datos");
+                    $result = mysqli_query($db, "SELECT nombre_proyecto, repositorio, link, imagen, descripcion from proyectos where id='$id'");
+                    $row = mysqli_fetch_array($result);
+                    ?>
+                    <h1>Cargar Proyecto</h1>
+                        <input type="text" name="nombre" value="<?= $row['nombre_proyecto'] ?>">
+                        <input type="text" name="repositorio" value="<?= $row['repositorio'] ?>">
+                        <input type="text" name="link" value="<?= $row['link'] ?>">
+                        <input type="file" name="imagen">
+                        <textarea name="descripcion" id="descripcion" cols="50" rows="5"><?= $row['nombre_proyecto'] ?>"</textarea>
+                        <input type="submit">
+                        <input type="reset">
+                        <a href="index.php?ok" class="linkOk">Página principal</a>
+                    </form>
                 </div>
-                <div class="mb-2">
-                <label for="repositorio" class="crud-label">Repositorio</label>
-                <input type="text" class="form-control" name="repositorio" id="repositorio" value="<?= $row['repositorio'] ?>">
-                </div>
-                <div class="mb-2">
-                <label for="link" class="crud-label">Link</label>
-                <input type="text" class="form-control" name="link" id="link" value="<?= $row['link'] ?>">
-                </div>
-                <div class="mb-2">
-                <label for="imagen" class="crud-label">Imagen</label>
-                <input class="form-control" type="file" name="imagen" id="imagen">
-                </div>
-                <div class="mb-2">
-                <label for="descripcion" class="crud-label">Descripción</label>
-                <textarea class="form-control" name="descripcion" id="descripcion" rows="3"><?= $row['nombre_proyecto'] ?>"</textarea>
-                </div>
-                <input type="hidden" name="id" value="<?= $id?>">
-                <input type="submit">
-            </form>
-            
-    </div>
-    <br>
-    <br>
-    <a href="index.php?ok" class="linkOk">Página principal</a>
-
+            </div>
+        </div>
 </div>
+
 
 </body>
 </html>
