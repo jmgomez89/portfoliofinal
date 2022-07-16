@@ -28,6 +28,7 @@
                         <input type="text" name="nombre_usuario" placeholder="Usuario">
                         <input type="password" name="clave" placeholder="Contraseña">
                         <input type="submit">
+                        <a href="index.php?ok" class="linkOk">Página principal</a>
                     </form>
                 </div>
             </div>

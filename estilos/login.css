@@ -17,10 +17,25 @@ body {
     top: 50%;
     left: 50%;
     background: #191919;
-    ;
     text-align: center;
     transition: 0.25s;
     margin-top: 100px
+}
+
+.box textarea,
+.box input[type="file"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 10px 10px;
+    width: 350px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s
 }
 
 .box input[type="text"],
@@ -46,11 +61,14 @@ body {
 }
 
 .box input[type="text"]:focus,
+.box input[type="file"]:focus,
+.box textarea:focus,
 .box input[type="password"]:focus {
     width: 300px;
     border-color: #2ecc71
 }
 
+.box input[type="reset"], 
 .box input[type="submit"] {
     border: 0;
     background: none;
@@ -66,74 +84,68 @@ body {
     cursor: pointer
 }
 
+.box input[type="reset"]:hover, 
 .box input[type="submit"]:hover {
     background: #2ecc71
 }
 
-.forgot {
-    text-decoration: underline
+.box a{
+    text-decoration: none;
 }
 
-ul.social-network {
-    list-style: none;
-    display: inline;
-    margin-left: 0 !important;
-    padding: 0
+
+@media (max-width:996px){
+
+    .box {
+        left: 40%;
+    }
+
 }
 
-ul.social-network li {
-    display: inline;
-    margin: 0 5px
+@media (max-width:882px){
+
+    .box {
+        left: 30%;
+    }
+
 }
 
-.social-network a.icoFacebook:hover {
-    background-color: #3B5998
+
+@media (max-width:777px){
+
+    .box {
+        left: 0%;
+        width: 400px;
+    }
+
 }
 
-.social-network a.icoTwitter:hover {
-    background-color: #33ccff
-}
+@media (max-width:472){
 
-.social-network a.icoGoogle:hover {
-    background-color: #BD3518
-}
+    .box {
+        width: 150px;
+    }
 
-.social-network a.icoFacebook:hover i,
-.social-network a.icoTwitter:hover i,
-.social-network a.icoGoogle:hover i {
-    color: #fff
-}
+    .box input[type="text"]:focus,
+    .box input[type="file"]:focus,
+    .box textarea:focus,
+    .box input[type="password"]:focus {
+    width: 110px;
+    border-color: #2ecc71
+    }   
 
-a.socialIcon:hover,
-.socialHoverClass {
-    color: #44BCDD
-}
+    .box textarea,
+    .box input[type="file"]{
 
-.social-circle li a {
-    display: inline-block;
-    position: relative;
-    margin: 0 auto 0 auto;
-    border-radius: 50%;
-    text-align: center;
-    width: 50px;
-    height: 50px;
-    font-size: 20px
-}
+        width: 100px;
 
-.social-circle li i {
-    margin: 0;
-    line-height: 50px;
-    text-align: center
-}
+    }
 
-.social-circle li a:hover i,
-.triggeredHover {
-    transform: rotate(360deg);
-    transition: all 0.2s
-}
+    .box input[type="text"],
+    .box input[type="password"] {
 
-.social-circle i {
-    color: #fff;
-    transition: all 0.8s;
-    transition: all 0.8s
+        width: 100px;
+
+    }
+
 }
