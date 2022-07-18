@@ -25,7 +25,7 @@
                 <div class="card">
                     <form action="portfolio_db.php" class="box" enctype="multipart/form-data" method="POST">
                     <h1>Cargar Proyecto</h1>
-                        <input type="text" name="nombre" placeholder="Nombre">
+                        <input type="text" name="nombre_proyecto" placeholder="Nombre">
                         <input type="text" name="repositorio" placeholder="Repositorio">
                         <input type="text" name="link" placeholder="Link">
                         <input type="file" name="imagen">
