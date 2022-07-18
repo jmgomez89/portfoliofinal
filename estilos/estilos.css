@@ -278,6 +278,9 @@
         width: 100%;
     }
 
+    .certificate{
+        width: 80%;
+    }
 }
 
 @media (max-width:578px){
