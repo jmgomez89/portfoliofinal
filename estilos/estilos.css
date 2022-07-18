@@ -279,3 +279,12 @@
     }
 
 }
+
+@media (max-width:578px){
+
+ .skills div{
+    flex-direction: row;
+    align-items: center;
+ }
+
+}
